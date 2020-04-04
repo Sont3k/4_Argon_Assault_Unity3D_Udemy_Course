@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2714573798226815130}
   - component: {fileID: 2726391210501578676}
   - component: {fileID: 2733821606468191596}
+  - component: {fileID: 575800681}
   m_Layer: 0
   m_Name: BioTorpedoWhite
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2713127182161927512}
-  m_LocalRotation: {x: -0, y: 0.1795821, z: -0, w: 0.983743}
+  m_LocalRotation: {x: 0, y: 0.1795835, z: 0, w: 0.9837428}
   m_LocalPosition: {x: 69.339966, y: 5.371315, z: 2.3118439}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &575800681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2713127182161927512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18562548, y: 0.1856255, z: 0.43652335}
+  m_Center: {x: 0.0000009536743, y: 0, z: -0.06688097}

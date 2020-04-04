@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     float xThrow, yThrow;
 
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -15f; 
+    [SerializeField] float controlPitchFactor = -15f;
 
     [SerializeField] float positionYawFactor = 2f;
 
@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+    }
+
+    void OnTriggerEnter(Collider other) {
+        print("Player triggered something");
     }
 
     void ProcessTranslation()
