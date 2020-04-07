@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
         Invoke("LoadFirstScene", 2f);
     }
 
-    void LoadFirstScene()
+    void LoadFirstScene() // called by string reference
     {
         SceneManager.LoadScene(1);
     }
