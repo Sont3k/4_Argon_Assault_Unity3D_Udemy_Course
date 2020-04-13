@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("In ms")] [SerializeField] float yMin = -10f;
     [Tooltip("In ms")] [SerializeField] float yMax = 10f;
+    [SerializeField] GameObject[] guns;
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
@@ -72,6 +74,34 @@ public class PlayerController : MonoBehaviour
         float roll = rollDueToControlThrow;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 
     void OnPlayerDeath() // called by string reference
